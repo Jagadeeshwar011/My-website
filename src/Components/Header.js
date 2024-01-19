@@ -5,11 +5,13 @@ import download from '../Assests/download.jpg'
 import Button from '@mui/material/Button';
 
 function Header() {
-  // This function will scroll to the desired section
+ 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const yOffset = -60; // Adjust the offset to the height of your fixed header if any
+      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
   };
 

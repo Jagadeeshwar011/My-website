@@ -1,0 +1,9 @@
+* {
+    box-sizing: border-box;
+  }
+  /* In your global.css or App.css file */
+* {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+  }
+  
