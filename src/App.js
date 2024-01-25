@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Header from './Components/Header'; // Adjust the import path as necessary
 import Homepage from './Components/Homepage'; // Adjust the import path as necessary
 import About from './Components/About';
+import Projects from "./Components/Projects";
 // Import other section components as necessary
 
 function App() {
@@ -17,10 +18,9 @@ function App() {
       <Header />
       <Homepage />
       <About/>
-     
-      <section id="projects">
-        {/* Content for Projects section */}
-      </section>
+        <Projects/>
+
+
       <section id="resume">
         {/* Content for Resume section */}
       </section>
