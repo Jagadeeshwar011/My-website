@@ -35,16 +35,17 @@ function NextArrow(props) {
     const { onClick } = props;
     return (
         <div
-            style={{
-                display: 'block',
-                background: 'none',
-                position: 'absolute',
-                top: '50%',
-                right: '25px',
-                zIndex: 2, // Ensure this is above other content
-                cursor: 'pointer',
-
-            }}
+        style={{
+            display: 'block',
+            background: 'none',
+            position: 'absolute',
+            top: '50%',
+            right: '20px', // Start with 20px and adjust as needed
+            zIndex: 2, // Increase if the arrow is behind other elements
+            cursor: 'pointer',
+            width: '80px', // Adjust the width if necessary
+            height: '30px', // Adjust the height if necessary
+        }}
             onClick={onClick}
         >
             <ArrowForwardIosIcon style={{ color: 'white', fontSize: '30px' }} /> {/* Customize color and size as needed */}
@@ -75,13 +76,13 @@ function PrevArrow(props) {
 const settings = {
     dots: true,
     infinite: true,
-    speed: 700,
+    speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     lft: true,
 };
 
