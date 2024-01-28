@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import useTypingEffect from './UseTypingEffect'; 
 import { Box, Typography, Button } from '@mui/material';
 import backgroundImage from '../Assests/Homepage.png'; // Update the path to where you've saved the image
 
@@ -15,7 +16,12 @@ const scrollToSection = (sectionId) => {
 
 };
 function Homepage() {
+    const { text, blink } = useTypingEffect(['Front-End Web Developer', 'MERN Stack Developer']);
+    
+
     return (
+
+
         <Box
             id="home"
             sx={{
@@ -23,6 +29,7 @@ function Homepage() {
                     marginRight: 0,
                     paddingRight: 0,
                     paddingLeft: 0,
+
                 },
                 minHeight: '100vh',
                 display: 'flex',
@@ -59,10 +66,10 @@ function Homepage() {
                 Hi, I'm <span style={{color: "#FFDF00", fontFamily: "'Montserrat', sans-serif", fontWeight: 700}}>Jagadeeshwar Dabbadi</span>
 
             </Typography>
-            <Typography variant="h5" gutterBottom
-                        sx={{textAlign: 'center', p: 3, fontFamily: 'Lato', fontWeight: '500'}}>
-                Front-End Web Developer
+            <Typography variant="h5" gutterBottom sx={{ textAlign: 'center', p: 3, fontFamily: 'Lato', fontWeight: '500' }}>
+                {text}<span className={blink ? 'blink' : ''}>|</span> {/* Add the cursor */}
             </Typography>
+
             <Button variant="contained" color="primary" href="/DabbadiResume.docx" download="Jagadeeshwar_Resume.docx"
                     sx={{
                         m: 3,

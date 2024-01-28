@@ -2,9 +2,14 @@ import React, { useEffect } from 'react';
 import Header from './Components/Header'; // Adjust the import path as necessary
 import Homepage from './Components/Homepage'; // Adjust the import path as necessary
 import About from './Components/About';
-// Import other section components as necessary
+import Projects from "./Components/Projects";
+import Resume from "./Components/Resume"
+import Contacts from './Components/Contacts';
+
 
 function App() {
+
+  
   useEffect(() => {
     const homeSection = document.getElementById('home');
     if (homeSection) {
@@ -17,10 +22,11 @@ function App() {
       <Header />
       <Homepage />
       <About/>
-     
-      <section id="projects">
-        {/* Content for Projects section */}
-      </section>
+        <Projects/>
+        <Resume/>
+        <Contacts/>
+
+
       <section id="resume">
         {/* Content for Resume section */}
       </section>

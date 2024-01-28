@@ -14,6 +14,8 @@ import Mongo from "../Assests/Mongo.png"
 import Git from "../Assests/Github.png"
 import Figma from "../Assests/Figma.png"
 import Skillsimage from "../Assests/Skills image.png"
+import useTypingEffect from './UseTypingEffect'; 
+
 
 
 
@@ -54,6 +56,8 @@ const SkillIcon = ({ icon, name }) => (
 
 
 const About = () => {
+  const { text, blink } = useTypingEffect(['Frontend Developer', 'MERN Stack Developer'], 100, 50, 2000);
+
 // Add this useEffect to ensure that the body does not overflow horizontally
 useEffect(() => {
   document.body.style.overflowX = 'hidden';
@@ -100,7 +104,7 @@ useEffect(() => {
             Jagadeeshwar Dabbadi
           </Typography>
           <Typography variant="h5" sx={{ fontWeight: 500, mb: 2 }}>
-            A Frontend Developer
+            {text}<span className={blink ? 'blink' : ''}>|</span> {/* Display the animated text with cursor */}
           </Typography>
           <Typography variant="body1" paragraph>
           As a MERN stack developer, I am committed to building high-quality web applications that meet the needs of my clients. With 4+ years of experience in full-stack web development, I specialize in using React.js, Next js, Typescript, MongoDB, Express.js, and Node.js to create scalable and robust web applications
