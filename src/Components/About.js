@@ -75,9 +75,7 @@ useEffect(() => {
         color: '#fff',
         m: 0,
         p: 0,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-start',
+          alignItems: 'flex-start',
         maxWidth: '100vw', // This ensures that the Box does not exceed the viewport width
         overflowX: 'hidden',
         width: '100vw',

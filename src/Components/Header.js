@@ -26,17 +26,31 @@ function Header() {
   };
 
   const buttonStyle = {
-    margin: '0 10px',
+    margin: '0px', // Removed extra margins
+    padding: '6px 8px', // You can adjust padding if needed
   };
+
 
   return (
     <AppBar position="fixed" style={{ background: '#000' }}>
-      <Toolbar style={{ justifyContent: 'space-between', alignItems: 'center' }}>
-        <img src={download} alt="Logo" style={{ maxHeight: '50px', margin: '0 12px' }} />
+      <Toolbar style={{
+        display: 'grid',
+        gridTemplateColumns: 'auto 1fr auto',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+
+      }}>
+        <img src={download} alt="Logo" style={{ maxHeight: '50px' }} />
 
         {/* Navigation Buttons */}
-        <div className="desktop-menu">
-          <Button color="inherit" onClick={() => scrollToSection('home')} style={buttonStyle}>Home</Button>
+        <div style={{
+          display: 'grid',
+          gridAutoFlow: 'column',
+          gap: '5rem', // Adjust this gap to achieve the desired spacing
+          justifyContent: 'center', // Center the buttons in the grid
+          alignItems: 'center',
+        }}>
+          <Button color="inherit" onClick={() => scrollToSection('home')}  style={buttonStyle}>Home</Button>
           <Button color="inherit" onClick={() => scrollToSection('about')} style={buttonStyle}>About</Button>
           <Button color="inherit" onClick={() => scrollToSection('projects')} style={buttonStyle}>Projects</Button>
           <Button color="inherit" onClick={() => scrollToSection('resume')} style={buttonStyle}>Resume</Button>
@@ -44,7 +58,7 @@ function Header() {
         </div>
 
         {/* Mobile Navigation Button */}
-        <div className="mobile-menu">
+        <div style={{ display: 'grid', gridAutoFlow: 'column', gap: '10px' }}>
           <IconButton color="inherit" onClick={handleEmailClick} style={buttonStyle}>
             <EmailIcon />
           </IconButton>

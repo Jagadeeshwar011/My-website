@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box,  Typography, Button } from '@mui/material';
+import { Grid,  Typography, Button, Box } from '@mui/material';
 import Todo from "../Assests/Todo.png"
 import Slider from 'react-slick';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
@@ -30,109 +30,87 @@ const projects = [
     },
 ];
 
-// Arrow components for custom navigation arrows
 function NextArrow(props) {
     const { onClick } = props;
     return (
-        <div
-        style={{
-            display: 'block',
-            background: 'none',
-            position: 'absolute',
-            top: '50%',
-            right: '20px', // Start with 20px and adjust as needed
-            zIndex: 2, // Increase if the arrow is behind other elements
-            cursor: 'pointer',
-            width: '80px', // Adjust the width if necessary
-            height: '30px', // Adjust the height if necessary
-        }}
+        <Box
             onClick={onClick}
+            sx={{
+                position: 'absolute',
+                top: '50%',
+                right: '40px',
+                transform: 'translateY(-50%)',
+                zIndex: 2,
+                cursor: 'pointer',
+            }}
         >
-            <ArrowForwardIosIcon style={{ color: 'white', fontSize: '30px' }} /> {/* Customize color and size as needed */}
-
-        </div>
+            <ArrowForwardIosIcon sx={{ color: 'white', fontSize: '30px' }} />
+        </Box>
     );
 }
+
 function PrevArrow(props) {
     const { onClick } = props;
     return (
-        <div
-            style={{
-                display: 'block',
-                background: 'none',
+        <Box
+            onClick={onClick}
+            sx={{
                 position: 'absolute',
                 top: '50%',
-                left: '25px',
-                zIndex: 2, // Ensure this is above other content
+                transform: 'translateY(-50%)',
+                zIndex: 2,
                 cursor: 'pointer',
-               
             }}
-            onClick={onClick}
         >
-            <ArrowBackIosIcon style={{ color: 'white', fontSize: '30px' }} /> {/* Customize color and size as needed */}
-        </div>
+            <ArrowBackIosIcon sx={{ color: 'white', fontSize: '30px' }} />
+        </Box>
     );
 }
+
+
 const settings = {
     dots: true,
     infinite: true,
-    speed: 800,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     autoplay: true,
-    autoplaySpeed: 2000,
-    lft: true,
+    autoplaySpeed: 3000,
 };
 
 function Projects() {
     return (
-        <Box  id="projects" sx={{
+        <Box id="projects" sx={{
+            position: 'relative', // Ensure the arrows are positioned relative to this container
+
             backgroundColor: '#000',
             color: '#fff',
             p: 4,
             width: '100%',
             overflow: 'hidden',
-            '& .slick-track': {
-                display: 'flex',
-            },
-            '& .slick-slide': {
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '100vh', // Full view height for each slide
-                '& > div': {
-                    flex: '1 0 100%',
-                    display: 'flex',
-                    flexDirection: 'row',
-                },
-            },
+
         }}>
-            <Slider {...settings}>
+            <Slider {...settings} sx={{ position: 'relative' }}>
                 {projects.map((project, index) => (
                     <Box key={index} sx={{
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        height: '100%',
+                        height: '100vh',
                         padding: '4rem',
-                        boxSizing: 'border-box', // Include padding in the box's dimensions
+                        boxSizing: 'border-box',
+                        pt: 15,
+
                     }}>
-                        <Box sx={{
-                            display: 'flex',
-                            flexDirection: { xs: 'column', md: 'row' }, // Stack on small screens, side by side on medium screens and up
-                            alignItems: 'center',
-                            width: '100%',
-                            maxWidth: '1200px', // Max width of the content
-                            m: 'auto', // Center the content box
-                        }}>
-                            <Box sx={{ flex: '1', mr: { md: '2rem' } }}>
-                                <Typography variant="h3" component="div" gutterBottom sx={{ color: '#FFDF00', mb: 1 }}>
+                        <Grid container spacing={2} justifyContent="center" alignItems="center">
+                            <Grid item xs={12} md={6}>
+                                <Typography variant="h3" gutterBottom sx={{ color: '#FFDF00', mb: 1 }}>
                                     {`Project.0${index + 1}`}
                                 </Typography>
-                                <Typography variant="h5" component="h2" gutterBottom sx={{ mb: 2 }}>
+                                <Typography variant="h5" gutterBottom sx={{ mb: 2 }}>
                                     {project.title}
                                 </Typography>
                                 <Typography variant="body1" sx={{ mb: 2 }}>
@@ -141,21 +119,23 @@ function Projects() {
                                 <Button variant="contained" href={project.link} target="_blank" rel="noopener noreferrer" sx={{
                                     backgroundColor: "#FFDF00",
                                     color: "#000",
-                                    '&:hover': {
-                                        backgroundColor: "#e6c300",
-                                    },
+                                    '&:hover': { backgroundColor: "#e6c300" },
                                 }}>
                                     View on GitHub
                                 </Button>
-                            </Box>
-                            <Box sx={{ flex: '1', display: 'flex', justifyContent: 'center', mt: { xs: '2rem', md: 0 } }}>
+                            </Grid>
+                            <Grid item xs={12} md={6} sx={{
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                            }}>
                                 <Box component="img" src={project.image} alt={project.title} sx={{
-                                    maxHeight: '400px', // Adjust based on your needs
+                                    maxHeight: { xs: '300px', md: '400px' },
                                     maxWidth: '100%',
                                     objectFit: 'contain',
                                 }} />
-                            </Box>
-                        </Box>
+                            </Grid>
+                        </Grid>
                     </Box>
                 ))}
             </Slider>

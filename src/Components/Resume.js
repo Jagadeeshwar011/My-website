@@ -1,28 +1,15 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
-const ResumeItem = ({ title, period, description, isRightAligned }) => (
-    <Box sx={{
-      display: 'flex',
-      justifyContent: isRightAligned ? 'space-between' : 'flex-start',
-      alignItems: 'center', // Align items to center to ensure they are aligned perfectly when flexDirection changes to column
-      flexDirection: 'column', // Stack items vertically
-      mb: 4,
-    }}>
-      <Box sx={{
-        width: '100%', // Ensure full width for the title and period to align centrally above the description
-        textAlign: 'center', // Center text alignment
-      }}>
-        <Typography variant="h6" sx={{ color: '#FFDF00', fontWeight: 'bold', m: 0 }}>{title}</Typography>
+import { Box, Typography, Grid } from '@mui/material';
+const ResumeItem = ({ title, period, description }) => (
+    <Grid container spacing={2} sx={{ mb: 4 }}>
+      <Grid item xs={12} md={12} sx={{ textAlign: 'center' }}>
+        <Typography variant="h6" sx={{ color: '#FFDF00', fontWeight: 'bold' }}>{title}</Typography>
         <Typography variant="subtitle1" sx={{ color: 'white', mt: 1, mb: 1 }}>{period}</Typography>
-      </Box>
-      <Box sx={{
-        width: '100%', // Full width for the description
-        textAlign: 'center', // Center text alignment
-      }}>
-        <Typography variant="body1" sx={{ color: 'white', mt: 1, mb: 0 }}>{description}</Typography>
-      </Box>
-    </Box>
-  );
+        <Typography variant="body1" sx={{ color: 'white', mt: 1 }}>{description}</Typography>
+      </Grid>
+    </Grid>
+);
+
   
   
   
@@ -63,27 +50,27 @@ const Resume = () => {
       description: "In my role at ARS Technologies, I was responsible for developing front-end applications using React and Redux, focusing on creating responsive designs with Bootstrap, and employing AngularJS for dynamic data binding. My work involved streamlining client-server communication with AJAX, ensuring fast and efficient data handling, and enhancing user interaction with the applications."
     },
   ];
-  
+
 
   return (
-    <Box id = "resume" sx={{
-      backgroundColor: '#000',
-      color: '#fff',
-      p: 4,
-      width : '100%',
-      overflowX: 'hidden', // Hide horizontal scrollbar
-    }}>
-      <Typography variant="h4" gutterBottom sx={{
-        color: '#FFDF00',
-        textAlign: 'center',
-        mb: 4
+      <Box id="resume" sx={{
+        backgroundColor: '#000',
+        color: '#fff',
+        p: 4,
+        width: '100%',
+        overflowX: 'hidden',
       }}>
-        Experience
-      </Typography>
-      {experience.map((exp, index) => (
-        <ResumeItem key={index} {...exp} isRightAligned={index % 2 !== 0} />
-      ))}
-    </Box>
+        <Typography variant="h4" gutterBottom sx={{
+          color: '#FFDF00',
+          textAlign: 'center',
+          mb: 4
+        }}>
+          Experience
+        </Typography>
+        {experience.map((exp, index) => (
+            <ResumeItem key={index} {...exp} />
+        ))}
+      </Box>
   );
 };
 
