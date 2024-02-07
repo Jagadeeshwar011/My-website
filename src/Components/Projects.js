@@ -38,7 +38,7 @@ function NextArrow(props) {
             sx={{
                 position: 'absolute',
                 top: '50%',
-                right: '40px',
+                right: ['5vw', '40px'],
                 transform: 'translateY(-50%)',
                 zIndex: 2,
                 cursor: 'pointer',
@@ -57,6 +57,7 @@ function PrevArrow(props) {
             sx={{
                 position: 'absolute',
                 top: '50%',
+                left: ['5vw', '5px'],
                 transform: 'translateY(-50%)',
                 zIndex: 2,
                 cursor: 'pointer',

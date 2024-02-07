@@ -2,13 +2,14 @@ import React from 'react';
 import { Box, Typography, Grid } from '@mui/material';
 const ResumeItem = ({ title, period, description }) => (
     <Grid container spacing={2} sx={{ mb: 4 }}>
-      <Grid item xs={12} md={12} sx={{ textAlign: 'center' }}>
+      <Grid item xs={12} sm={12} md={10} lg={8} sx={{ margin: 'auto', textAlign: 'center' }}>
         <Typography variant="h6" sx={{ color: '#FFDF00', fontWeight: 'bold' }}>{title}</Typography>
         <Typography variant="subtitle1" sx={{ color: 'white', mt: 1, mb: 1 }}>{period}</Typography>
-        <Typography variant="body1" sx={{ color: 'white', mt: 1 }}>{description}</Typography>
+        <Typography variant="body1" sx={{ color: 'white', mt: 1, wordWrap: 'break-word' }}>{description}</Typography>
       </Grid>
     </Grid>
 );
+
 
   
   
@@ -63,7 +64,13 @@ const Resume = () => {
         <Typography variant="h4" gutterBottom sx={{
           color: '#FFDF00',
           textAlign: 'center',
-          mb: 4
+          mb: 4,
+          fontSize: {
+            xs: '1.5rem', // smaller font size on extra-small screens
+            sm: '2rem',   // larger font size on small screens and above
+            md: '2.5rem', // etc.
+            lg: '3rem',
+          }
         }}>
           Experience
         </Typography>
