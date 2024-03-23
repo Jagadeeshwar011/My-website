@@ -124,8 +124,8 @@ useEffect(() => {
               <Typography variant="body1">Address: Saint Louis, USA</Typography>
             </Grid>
           </Grid>
-          <Button variant="contained" href="/Dabbadi_Resume.docx" download="Jagadeeshwar_Resume.docx" sx={{ mt: 4, backgroundColor: '#FFDF00', '&:hover': { backgroundColor: "#e6c300" }, color: '#000' }}>
-            MY RESUME
+          <Button variant="contained" href="/Jagadeesh_resume.docx" download="Jagadeeshwar_Resume.docx" sx={{ mt: 4, backgroundColor: '#FFDF00', '&:hover': { backgroundColor: "#e6c300" }, color: '#000' }}>
+            MY RESUMES
           </Button>
         </Grid>
         <Grid container item spacing={2} justifyContent="flex-end" alignItems="flex-start">

@@ -74,7 +74,7 @@ function Homepage() {
                 {text}<span className={blink ? 'blink' : ''}>|</span> {/* Add the cursor */}
             </Typography>
 
-            <Button variant="contained" color="primary" href="/Dabbadi_Resume.docx" download="Jagadeeshwar_Resume.docx"
+            <Button variant="contained" color="primary" href="/Jagadeesh_resume.docx" download="Jagadeeshwar_Resume.docx"
                     sx={{
                         color: "black",
                         backgroundColor: "#FFDF00",
