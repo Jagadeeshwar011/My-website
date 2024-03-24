@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/My-website/static/css/main.98ad5336.css",
+    "main.js": "/My-website/static/js/main.ae0f5d26.js",
+    "static/js/787.61f74e33.chunk.js": "/My-website/static/js/787.61f74e33.chunk.js",
+    "static/media/Homepage.png": "/My-website/static/media/Homepage.71351601f3f73b308330.png",
+    "static/media/Skills image.png": "/My-website/static/media/Skills image.139357b2623b1615f757.png",
+    "static/media/ui.png": "/My-website/static/media/ui.2af088415d0a65d3782c.png",
+    "static/media/profilepic.jpeg": "/My-website/static/media/profilepic.314ac0157efa33858436.jpeg",
+    "static/media/contact.png": "/My-website/static/media/contact.07c237b05148f80c34c4.png",
+    "static/media/aws.png": "/My-website/static/media/aws.fde7be569fbbed8586ba.png",
+    "static/media/Figma.png": "/My-website/static/media/Figma.66c3d555e1026dab7020.png",
+    "static/media/Github.png": "/My-website/static/media/Github.90d5f66d9ac577d91985.png",
+    "static/media/Quizapp.png": "/My-website/static/media/Quizapp.3130e0968dd4f4876503.png",
+    "static/media/Notesapp.png": "/My-website/static/media/Notesapp.3856471bb0a4d4d96198.png",
+    "static/media/JS.jpg": "/My-website/static/media/JS.e848bdc2c0b4ed5ed54b.jpg",
+    "static/media/css3t.jpg": "/My-website/static/media/css3t.5de8fd15a6f853d21edc.jpg",
+    "static/media/Todo.png": "/My-website/static/media/Todo.008ebc6d89738a7621c2.png",
+    "static/media/Ex.png": "/My-website/static/media/Ex.04e4743fbd704db71ed7.png",
+    "static/media/HTML.png": "/My-website/static/media/HTML.ff3cf75e3b7cbb4ea77c.png",
+    "static/media/TAIlwind.jpg": "/My-website/static/media/TAIlwind.358eb35819a113cf5820.jpg",
+    "static/media/React.webp": "/My-website/static/media/React.0c40a476122ed4d1e382.webp",
+    "static/media/slick.svg": "/My-website/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/My-website/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/My-website/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/My-website/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/My-website/index.html",
+    "main.98ad5336.css.map": "/My-website/static/css/main.98ad5336.css.map",
+    "main.ae0f5d26.js.map": "/My-website/static/js/main.ae0f5d26.js.map",
+    "787.61f74e33.chunk.js.map": "/My-website/static/js/787.61f74e33.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.98ad5336.css",
+    "static/js/main.ae0f5d26.js"
+  ]
+}
