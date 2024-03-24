@@ -21,8 +21,14 @@ const Resume = () => {
 
   const experience = [
     {
+      title: "American National Insurance",
+      period: "Feburary 2024 – Present",
+      place: "Springfeild, MO",
+      description: "At American National Insurance, I played a pivotal role in developing a cutting-edge call center portal using Vue.js and Vuex for frontend state management. Leveraging TypeScript and Next.js for backend development, I ensured robustness and scalability. Integrating with IBM API Connect and deploying on Azure, I contributed to seamless communication and reliable deployment. Active participation in Agile ceremonies facilitated collaboration and continuous improvement."
+    },
+    {
       title: "Interco - JavaScript-Frontend Developer",
-      period: "September 2023 – Present",
+      period: "September 2023 – February 2024",
       place: "St Louis, MO",
       description: "In this dynamic role, I led the initiation and architecture of a cutting-edge ERP system utilizing React for front-end development. My focus was on ensuring seamless UI/UX integration and optimizing performance to enhance user engagement. As an expert in state management, I utilized Redux to maintain system consistency and reliability. My proficiency in Jest enabled me to implement robust unit testing, ensuring the application's stability and smooth operation."
     },
