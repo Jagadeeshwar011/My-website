@@ -124,7 +124,7 @@ useEffect(() => {
               <Typography variant="body1">Address: Springfield, USA</Typography>
             </Grid>
           </Grid>
-          <Button variant="contained" href="/Jagadeesh_resume.docx" download="Jagadeeshwar_Resume.docx" sx={{ mt: 4, backgroundColor: '#FFDF00', '&:hover': { backgroundColor: "#e6c300" }, color: '#000' }}>
+          <Button variant="contained" href="/Jagadeesh_Resume.pdf" download="Jagadeesh_Resume.pdf" sx={{ mt: 4, backgroundColor: '#FFDF00', '&:hover': { backgroundColor: "#e6c300" }, color: '#000' }}>
             MY RESUMES
           </Button>
         </Grid>
