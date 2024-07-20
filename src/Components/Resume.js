@@ -11,11 +11,6 @@ const ResumeItem = ({ title, period, description }) => (
 );
 
 
-  
-  
-  
-  
-
 const Resume = () => {
  
 
@@ -23,7 +18,7 @@ const Resume = () => {
     {
       title: "American National Insurance",
       period: "Feburary 2024 – Present",
-      place: "Springfeild, MO",
+      place: "Springfield, MO",
       description: "At American National Insurance, I played a pivotal role in developing a cutting-edge call center portal using Vue.js and Vuex for frontend state management. Leveraging TypeScript and Next.js for backend development, I ensured robustness and scalability. Integrating with IBM API Connect and deploying on Azure, I contributed to seamless communication and reliable deployment. Active participation in Agile ceremonies facilitated collaboration and continuous improvement."
     },
     {
@@ -33,7 +28,7 @@ const Resume = () => {
       description: "In this dynamic role, I led the initiation and architecture of a cutting-edge ERP system utilizing React for front-end development. My focus was on ensuring seamless UI/UX integration and optimizing performance to enhance user engagement. As an expert in state management, I utilized Redux to maintain system consistency and reliability. My proficiency in Jest enabled me to implement robust unit testing, ensuring the application's stability and smooth operation."
     },
     {
-      title: "Duotronix - Full-Stack Developer",
+      title: "ARS Technologies - Full-Stack Developer",
       period: "January 2023 – August 2023",
       place: "McKinney, TX",
       description: "As a full-stack developer, I engineered comprehensive solutions using Angular 9 and TypeScript, prioritizing clean, maintainable code and asynchronous operations with RXJS. My role included the development of RESTful APIs, optimizing database schemas for performance, and crafting a user experience that was both intuitive and responsive. My collaborative efforts with UX designers ensured that the end product was both functional and visually appealing."

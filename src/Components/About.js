@@ -121,7 +121,7 @@ useEffect(() => {
               <Typography variant="body1">Email: Jagadeeshwarreddy7701@gmail.com</Typography>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <Typography variant="body1">Address: Springfeild, USA</Typography>
+              <Typography variant="body1">Address: Springfield, USA</Typography>
             </Grid>
           </Grid>
           <Button variant="contained" href="/Jagadeesh_resume.docx" download="Jagadeeshwar_Resume.docx" sx={{ mt: 4, backgroundColor: '#FFDF00', '&:hover': { backgroundColor: "#e6c300" }, color: '#000' }}>
